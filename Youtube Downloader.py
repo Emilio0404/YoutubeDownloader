@@ -28,7 +28,6 @@ def main():
         if 'list' in link:
             print('This link is from a YouTube playlist. Do you want to download the whole playlist?')
             print('1. Only the video\n2. The whole playlist\n3. Exit')
-            
             # Keep running while the input is invalid
             userOption = True
             while userOption == True:
@@ -37,7 +36,6 @@ def main():
                     userOption = False
                 else:
                     print('Please insert a valid number.')
-            
             # Runs an option according to the input
             if user == '1':
                 link = trimLink(link)
@@ -47,7 +45,6 @@ def main():
             elif user == '3':
                 print('Have a nice day!')
                 sys.exit()
-                
         else:
             downloadVideo(link)
         
