@@ -16,4 +16,4 @@ $ pip install pytube
 Check out the [pytube documentation](https://pytube.io/en/latest/)
 
 
-**IMPORTANT NOTE:** Playlists have to be public to be downloaded, the PyTube doesn't handle private playlists. 
+**IMPORTANT NOTE:** Playlists have to be public to be downloaded, PyTube doesn't handle private playlists. 
