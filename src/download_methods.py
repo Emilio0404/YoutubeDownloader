@@ -13,6 +13,10 @@ Returns a boolean with the download status code. True if download was succesfull
 def download(window, link, format, resolution, whole_list):
     directory = askdirectory(title = "Select folder")
     
+    # IF user selected cancel (empty directory), return False
+    if directory == "":
+        return False
+    
     if whole_list == True:
         p = Playlist(link)
         
@@ -39,7 +43,7 @@ def getVideo(window, link, format, resolution, directory):
     else:
         stream = yt.streams.get_audio_only()
 
-    window.downloaded_text.insert(1.0, f"Now downloading {(yt.title if len(yt.title) < 30 else yt.title[0:30])}...") # Update current video
+    window.downloaded_text.insert(1.0, f"\nNow downloading {(yt.title if len(yt.title) < 30 else yt.title[0:30])}...") # Update current video
     window.update()
     stream.download(directory) # Download video with pytube
 

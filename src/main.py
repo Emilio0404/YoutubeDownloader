@@ -70,6 +70,7 @@ class YouTubeDownloader:
 
     def download_content(self):
         answer = False
+        status = False
         self.window.downloaded_text.delete(1.0, END) # Clear printed text
 
         # If the video is from a playlist, ask if user wants to download whole playlist or just video
@@ -81,10 +82,10 @@ class YouTubeDownloader:
         if answer is not None:
             status = download_methods.download(self.window, self.ytlink.get(), self.fileFormat.get(), self.resolution.get(), answer)
 
-        if status:
-            window.downloaded_text.insert("1.0", "Your videos are now downloaded")
+        if status == True:
+            self.window.downloaded_text.insert("1.0", "Your videos are now downloaded")
         else:
-            window.downloaded_text.insert("1.0", "Unable to download files correctly")
+            self.window.downloaded_text.insert("1.0", "Unable to download files correctly")
 
 
     def update_menu_text(self):
