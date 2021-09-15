@@ -9,9 +9,9 @@ I used this project to learn about creating GUIs, reading documentation, and usi
 
 This app only requires Python and the Pytube library. You can install it using:
 
-```bash
+```
 $ pip install pytube
-´´´
+```
 
 Check out the [pytube documentation](https://pytube.io/en/latest/)
 
