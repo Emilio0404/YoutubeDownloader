@@ -1,19 +1,27 @@
 # YoutubeDownloader
 
-This is a personal project I created to help my family download YouTube videos for personal use. 
-It works using PyTube and Tkinter. 
-
-I used this project to learn about creating GUIs, reading documentation, and using APIs.
+Command line utility to download YouTube videos.
 
 ## How to use:
 
-This app only requires Python and the Pytube library. You can install it using:
-
-```
-$ pip install pytube
-```
-
-Check out the [pytube documentation](https://pytube.io/en/latest/)
-
+Usage: python -m ytDownload [video | audio] [link]
 
 **IMPORTANT NOTE:** Playlists have to be public to be downloaded, PyTube doesn't handle private playlists. 
+
+## Dependencies
+
+PyTube
+ffmpeg
+sys
+os
+tkinter
+
+## TODO
+
+- Video tag
+- Catch errors. Invalid link, other OS errors
+    - Playlists must be public. Warn user
+- Join audio and video
+- Refactor
+- Command line arguments doesn't accept & character
+- Close file dialog
